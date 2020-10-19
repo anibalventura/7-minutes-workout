@@ -1,0 +1,135 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvProgressBarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/progress_bar_get_ready"
+                android:textColor="@color/primaryColor"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/flProgressBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/flProgressBar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/circular_progress_bar_border"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circular_progress_bar_gray"
+                    android:indeterminate="false"
+                    android:max="10"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:rotation="-90" />
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circular_progress_bar_bg"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvProgressBarTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clExerciseTimer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/tvExerciseTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="EXERCISE TITLE"
+                android:textColor="@color/primaryColor"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/flExerciseTimer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/flExerciseTimer"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/circular_progress_bar_border"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ProgressBar
+                    android:id="@+id/pbExercise"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circular_progress_bar_gray"
+                    android:indeterminate="false"
+                    android:max="30"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:rotation="-90" />
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circular_progress_bar_bg"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvExerciseTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</layout>

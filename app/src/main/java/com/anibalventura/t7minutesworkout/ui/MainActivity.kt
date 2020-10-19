@@ -1,4 +1,4 @@
-package com.anibalventura.t7minutesworkout
+package com.anibalventura.t7minutesworkout.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
@@ -11,6 +11,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.anibalventura.t7minutesworkout.R
 import com.anibalventura.t7minutesworkout.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -55,6 +56,7 @@ class MainActivity : AppCompatActivity() {
 
             when (destination.id) {
                 R.id.homeFragment -> showToolbarTitleOrUp(toolBar, false, false)
+                R.id.exerciseFragment -> showToolbarTitleOrUp(toolBar, true, true)
             }
         }
     }
