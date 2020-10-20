@@ -75,28 +75,43 @@
             android:layout_height="match_parent"
             android:visibility="invisible">
 
+            <ImageView
+                android:id="@+id/ivExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:contentDescription="@string/exercise_image"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toTopOf="@+id/tvExerciseName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:src="@drawable/ic_jumping_jacks" />
+
             <TextView
-                android:id="@+id/tvExerciseTitle"
+                android:id="@+id/tvExerciseName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="EXERCISE TITLE"
                 android:textColor="@color/primaryColor"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/flExerciseTimer"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivExercise"
+                tools:text="Exercise Name" />
 
             <FrameLayout
                 android:id="@+id/flExerciseTimer"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/circular_progress_bar_border"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/tvExerciseName">
 
                 <ProgressBar
                     android:id="@+id/pbExercise"
@@ -129,6 +144,7 @@
                         tools:ignore="HardcodedText" />
                 </LinearLayout>
             </FrameLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </RelativeLayout>
