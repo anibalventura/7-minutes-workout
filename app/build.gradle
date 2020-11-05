@@ -57,12 +57,15 @@ dependencies {
     // Support libraries
     implementation "androidx.appcompat:appcompat:1.2.0"
     implementation "androidx.fragment:fragment-ktx:1.2.5"
-    implementation "androidx.constraintlayout:constraintlayout:2.0.2"
+    implementation "androidx.constraintlayout:constraintlayout:2.0.4"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     // Navigation
     implementation "android.arch.navigation:navigation-fragment-ktx:$navigation_version"
     implementation "android.arch.navigation:navigation-ui-ktx:$navigation_version"
+
+    // RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
     // Preferences
     implementation "androidx.preference:preference-ktx:1.1.1"

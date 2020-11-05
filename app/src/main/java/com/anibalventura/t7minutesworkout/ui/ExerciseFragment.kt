@@ -9,10 +9,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.anibalventura.t7minutesworkout.R
+import com.anibalventura.t7minutesworkout.adapters.ExerciseStatusAdapter
 import com.anibalventura.t7minutesworkout.data.ExerciseModel
+import com.anibalventura.t7minutesworkout.data.Exercises.getExercises
 import com.anibalventura.t7minutesworkout.databinding.FragmentExerciseBinding
-import com.anibalventura.t7minutesworkout.utils.Constants.getExercises
 import com.anibalventura.t7minutesworkout.utils.snackBarMsg
 import java.util.*
 
@@ -33,17 +35,19 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
     private var tts: TextToSpeech? = null
     private var player: MediaPlayer? = null
 
+    private var exerciseStatusAdapter: ExerciseStatusAdapter? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentExerciseBinding.inflate(inflater, container, false)
-
         tts = TextToSpeech(requireContext(), this)
         exerciseList = getExercises()
 
         startRestTimer(pauseOffset)
         setRestView()
+        setupExerciseStatusRecyclerView()
 
         return binding.root
     }
@@ -76,8 +80,9 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
                 }
 
                 override fun onFinish() {
-                    currentExercisePosition++
                     setExerciseView()
+                    exerciseList!![currentExercisePosition].setIsSelected(true)
+                    exerciseStatusAdapter!!.notifyDataSetChanged()
                 }
             }.start()
     }
@@ -114,6 +119,9 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
                         stopTimer()
                         startRestTimer(pauseOffset)
                         setRestView()
+                        exerciseList!![currentExercisePosition].setIsSelected(false)
+                        exerciseList!![currentExercisePosition].setIsCompleted(true)
+                        exerciseStatusAdapter!!.notifyDataSetChanged()
                     }
                     else -> snackBarMsg(
                         requireView(), getString(R.string.snack_bar_congratulations)
@@ -132,8 +140,16 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
         speakOut(exerciseList!![currentExercisePosition + 1].getName())
         startExerciseTimer(pauseOffset)
 
+        currentExercisePosition++
         binding.ivExercise.setImageResource(exerciseList!![currentExercisePosition].getImage())
         binding.tvExerciseName.text = exerciseList!![currentExercisePosition].getName()
+    }
+
+    private fun setupExerciseStatusRecyclerView() {
+        binding.rvExerciseStatus.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        exerciseStatusAdapter = ExerciseStatusAdapter(exerciseList!!, requireContext())
+        binding.rvExerciseStatus.adapter = exerciseStatusAdapter
     }
 
     /** ====================================== App exit/close ====================================== **/

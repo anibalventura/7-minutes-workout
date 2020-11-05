@@ -155,10 +155,18 @@
                         android:textSize="25sp"
                         android:textStyle="bold"
                         tools:ignore="HardcodedText" />
+
                 </LinearLayout>
             </FrameLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvExerciseStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp" />
 
     </RelativeLayout>
 </layout>
