@@ -8,13 +8,13 @@
         android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clProgressBar"
+            android:id="@+id/clRestView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="visible">
 
             <TextView
-                android:id="@+id/tvProgressBarTitle"
+                android:id="@+id/tvRest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
@@ -22,12 +22,25 @@
                 android:textColor="@color/primaryColor"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/flProgressBar"
+                app:layout_constraintBottom_toTopOf="@+id/tvUpcomingExercise"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
+            <TextView
+                android:id="@+id/tvUpcomingExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:textColor="@color/secondaryTextColor"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/flRestTimer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Jumping Jacks" />
+
             <FrameLayout
-                android:id="@+id/flProgressBar"
+                android:id="@+id/flRestTimer"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/circular_progress_bar_border"
@@ -37,7 +50,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ProgressBar
-                    android:id="@+id/progressBar"
+                    android:id="@+id/pbRest"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -57,7 +70,7 @@
                     android:gravity="center">
 
                     <TextView
-                        android:id="@+id/tvProgressBarTimer"
+                        android:id="@+id/tvRestTimer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="10"
@@ -70,7 +83,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clExerciseTimer"
+            android:id="@+id/clExerciseView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="invisible">

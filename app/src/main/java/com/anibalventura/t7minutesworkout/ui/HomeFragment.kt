@@ -18,7 +18,6 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment.
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         binding.btnStart.setOnClickListener {
@@ -28,7 +27,6 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-    // Destroy all references of the fragment to avoid memory leak.
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
