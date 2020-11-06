@@ -2,9 +2,14 @@
     <string name="app_name">7 Minutes Workout</string>
     <string name="home_logo_description">Home Logo</string>
     <string name="home_btn_start">Start</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="progress_bar_get_ready">GET READY FOR</string>
     <string name="exercise_image">Exercise Image</string>
-    <string name="snack_bar_congratulations">Congratulations! You finish 7 minutes of workout.</string>
+    <string name="exercise_over_btn_finish">Finish</string>
+    <string name="exercise_over_done_image">Done Image</string>
+    <string name="exercise_over_congratulations">Congratulations!</string>
+    <string name="exercise_over_congratulations_msg">You have done the workout!</string>
+    <string name="dialog_sure">Are you sure?</string>
+    <string name="dialog_sure_msg">This will stop your workout. You\'ve come this far, are you sure you want to quit?</string>
+    <string name="dialog_positive">Yes</string>
+    <string name="dialog_negative">No</string>
 </resources>

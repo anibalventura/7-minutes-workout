@@ -8,15 +8,21 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.afollestad.materialdialogs.LayoutMode
+import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.bottomsheets.BottomSheet
 import com.anibalventura.t7minutesworkout.R
 import com.anibalventura.t7minutesworkout.adapters.ExerciseStatusAdapter
 import com.anibalventura.t7minutesworkout.data.ExerciseModel
 import com.anibalventura.t7minutesworkout.data.Exercises.getExercises
 import com.anibalventura.t7minutesworkout.databinding.FragmentExerciseBinding
-import com.anibalventura.t7minutesworkout.utils.snackBarMsg
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+
 
 class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
 
@@ -30,7 +36,7 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
     private var pauseOffset: Long = 0 // pauseOffset = timerDuration - time left
 
     private var exerciseList: MutableList<ExerciseModel>? = null
-    private var currentExercisePosition = -1
+    private var currentExercisePosition = 10
 
     private var tts: TextToSpeech? = null
     private var player: MediaPlayer? = null
@@ -48,6 +54,11 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
         startRestTimer(pauseOffset)
         setRestView()
         setupExerciseStatusRecyclerView()
+
+        onBackPressed()
+        requireActivity().toolbar.setNavigationOnClickListener {
+            requireActivity().onBackPressed()
+        }
 
         return binding.root
     }
@@ -123,9 +134,7 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
                         exerciseList!![currentExercisePosition].setIsCompleted(true)
                         exerciseStatusAdapter!!.notifyDataSetChanged()
                     }
-                    else -> snackBarMsg(
-                        requireView(), getString(R.string.snack_bar_congratulations)
-                    )
+                    else -> findNavController().navigate(R.id.action_exerciseFragment_to_finishFragment)
                 }
             }
         }.start()
@@ -152,7 +161,30 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
         binding.rvExerciseStatus.adapter = exerciseStatusAdapter
     }
 
-    /** ====================================== App exit/close ====================================== **/
+    /** ====================================== Fragment exit/close ====================================== **/
+
+    private fun onBackPressed() {
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+
+                    MaterialDialog(requireContext(), BottomSheet(LayoutMode.WRAP_CONTENT)).show {
+                        title(R.string.dialog_sure)
+                        message(R.string.dialog_sure_msg)
+
+                        positiveButton(R.string.dialog_positive) {
+                            if (isEnabled) {
+                                isEnabled = false
+                                requireActivity().onBackPressed()
+                            }
+                        }
+
+                        negativeButton(R.string.dialog_negative)
+                    }
+                }
+            }
+        )
+    }
 
     override fun onDestroy() {
         stopTimer()

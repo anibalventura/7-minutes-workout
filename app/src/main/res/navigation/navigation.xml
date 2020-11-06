@@ -12,11 +12,27 @@
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_exerciseFragment"
-            app:destination="@id/exerciseFragment" />
+            app:destination="@id/exerciseFragment"
+            app:popUpTo="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/exerciseFragment"
         android:name="com.anibalventura.t7minutesworkout.ui.ExerciseFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_exercise" />
+        tools:layout="@layout/fragment_exercise">
+        <action
+            android:id="@+id/action_exerciseFragment_to_finishFragment"
+            app:destination="@id/exerciseOverFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseOverFragment"
+        android:name="com.anibalventura.t7minutesworkout.ui.ExerciseOverFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_exercise_over">
+        <action
+            android:id="@+id/action_finishFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
 </navigation>
