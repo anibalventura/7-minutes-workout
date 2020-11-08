@@ -12,4 +12,14 @@
     <string name="dialog_sure_msg">This will stop your workout. You\'ve come this far, are you sure you want to quit?</string>
     <string name="dialog_positive">Yes</string>
     <string name="dialog_negative">No</string>
+    <string name="home_btn_bmi">BMI</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="bmi_metric_weight">WEIGHT (Kg)</string>
+    <string name="bmi_metric_height">HEIGHT (Cm)</string>
+    <string name="bmi_calculate">Calculate</string>
+    <string name="bmi_your_result">Your BMI</string>
+    <string name="bmi_metric_units">METRIC UNITS</string>
+    <string name="bmi_us_units">US UNITS</string>
+    <string name="bmi_us_weight">WEIGHT (Lbs)</string>
+    <string name="bmi_us_height">HEIGHT (Feet)</string>
 </resources>

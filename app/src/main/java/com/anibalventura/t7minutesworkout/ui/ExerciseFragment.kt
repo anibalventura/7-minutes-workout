@@ -23,7 +23,6 @@ import com.anibalventura.t7minutesworkout.databinding.FragmentExerciseBinding
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
-
 class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
 
     private var _binding: FragmentExerciseBinding? = null
@@ -33,7 +32,7 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
     private val countDownInterval: Long = 1000
     private var timerProgressBar: Long = 3000
     private var timerExercise: Long = 5000
-    private var pauseOffset: Long = 0 // pauseOffset = timerDuration - time left
+    private var pauseOffset: Long = 0 // timerDuration - time left
 
     private var exerciseList: MutableList<ExerciseModel>? = null
     private var currentExercisePosition = 10
@@ -44,8 +43,7 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
     private var exerciseStatusAdapter: ExerciseStatusAdapter? = null
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentExerciseBinding.inflate(inflater, container, false)
         tts = TextToSpeech(requireContext(), this)
@@ -171,15 +169,13 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
                     MaterialDialog(requireContext(), BottomSheet(LayoutMode.WRAP_CONTENT)).show {
                         title(R.string.dialog_sure)
                         message(R.string.dialog_sure_msg)
-
+                        negativeButton(R.string.dialog_negative)
                         positiveButton(R.string.dialog_positive) {
                             if (isEnabled) {
                                 isEnabled = false
                                 requireActivity().onBackPressed()
                             }
                         }
-
-                        negativeButton(R.string.dialog_negative)
                     }
                 }
             }

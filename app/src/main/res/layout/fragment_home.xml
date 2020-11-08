@@ -2,6 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+
+        <variable
+            name="home"
+            type="com.anibalventura.t7minutesworkout.ui.HomeFragment" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,6 +30,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:background="@drawable/home_btn_start"
+            android:onClick="@{() -> home.btnPressed(&quot;start&quot;)}"
             android:padding="16dp"
             android:text="@string/home_btn_start"
             android:textColor="@android:color/white"
@@ -32,6 +40,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivHomeLogo"
             app:layout_constraintVertical_bias="0.20" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBmi"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_btn_start"
+            android:onClick="@{() -> home.btnPressed(&quot;bmi&quot;)}"
+            android:text="@string/home_btn_bmi"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnStart" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

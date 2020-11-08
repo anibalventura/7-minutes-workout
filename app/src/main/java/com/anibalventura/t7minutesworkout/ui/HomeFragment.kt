@@ -15,16 +15,19 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-
-        binding.btnStart.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_exerciseFragment)
-        }
+        binding.home = this
 
         return binding.root
+    }
+
+    fun btnPressed(option: String) {
+        when (option) {
+            "start" -> findNavController().navigate(R.id.action_homeFragment_to_exerciseFragment)
+            "bmi" -> findNavController().navigate(R.id.action_homeFragment_to_bmiFragment)
+        }
     }
 
     override fun onDestroy() {
