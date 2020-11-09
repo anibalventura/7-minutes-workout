@@ -22,4 +22,6 @@
     <string name="bmi_us_units">US UNITS</string>
     <string name="bmi_us_weight">WEIGHT (Lbs)</string>
     <string name="bmi_us_height">HEIGHT (Feet)</string>
+    <string name="history">Exercises History</string>
+    <string name="home_btn_history">History</string>
 </resources>

@@ -27,6 +27,7 @@ class HomeFragment : Fragment() {
         when (option) {
             "start" -> findNavController().navigate(R.id.action_homeFragment_to_exerciseFragment)
             "bmi" -> findNavController().navigate(R.id.action_homeFragment_to_bmiFragment)
+            "history" -> findNavController().navigate(R.id.action_homeFragment_to_historyFragment)
         }
     }
 

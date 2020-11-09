@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.homeFragment -> showToolbarTitleOrUp(toolBar, false, false)
                 R.id.exerciseFragment -> showToolbarTitleOrUp(toolBar, true, true)
                 R.id.bmiFragment -> showToolbarTitleOrUp(toolBar, true, true)
+                R.id.historyFragment -> showToolbarTitleOrUp(toolBar, true, true)
             }
         }
     }

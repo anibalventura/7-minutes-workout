@@ -51,8 +51,22 @@
             android:textColor="@android:color/white"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnHistory"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnStart" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHistory"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_btn_start"
+            android:onClick="@{() -> home.btnPressed(&quot;history&quot;)}"
+            android:text="@string/home_btn_history"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnBmi"
             app:layout_constraintTop_toBottomOf="@+id/btnStart" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

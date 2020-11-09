@@ -18,6 +18,10 @@
             android:id="@+id/action_homeFragment_to_bmiFragment"
             app:destination="@id/bmiFragment"
             app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:popUpTo="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/exerciseFragment"
@@ -44,4 +48,9 @@
         android:name="com.anibalventura.t7minutesworkout.ui.BmiFragment"
         android:label="@string/bmi_calculator"
         tools:layout="@layout/fragment_bmi" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.anibalventura.t7minutesworkout.ui.HistoryFragment"
+        android:label="@string/history"
+        tools:layout="@layout/fragment_history" />
 </navigation>
