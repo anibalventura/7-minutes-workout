@@ -9,12 +9,11 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.anibalventura.t7minutesworkout.R
-import com.anibalventura.t7minutesworkout.data.ExerciseModel
-import kotlinx.android.synthetic.main.item_exercise_status.view.*
+import com.anibalventura.t7minutesworkout.data.models.ExerciseModel
+import kotlinx.android.synthetic.main.recyclerview_exercise_status.view.*
 
 class ExerciseStatusAdapter(
-    private val items: MutableList<ExerciseModel>,
-    private val context: Context
+    private val items: MutableList<ExerciseModel>, private val context: Context
 ) :
     RecyclerView.Adapter<ExerciseStatusAdapter.ViewHolder>() {
 
@@ -25,7 +24,7 @@ class ExerciseStatusAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(context)
-                .inflate(R.layout.item_exercise_status, parent, false)
+                .inflate(R.layout.recyclerview_exercise_status, parent, false)
         )
     }
 

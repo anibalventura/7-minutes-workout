@@ -17,8 +17,8 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.bottomsheets.BottomSheet
 import com.anibalventura.t7minutesworkout.R
 import com.anibalventura.t7minutesworkout.adapters.ExerciseStatusAdapter
-import com.anibalventura.t7minutesworkout.data.ExerciseModel
-import com.anibalventura.t7minutesworkout.data.Exercises.getExercises
+import com.anibalventura.t7minutesworkout.data.models.ExerciseModel
+import com.anibalventura.t7minutesworkout.data.models.Exercises.getExercises
 import com.anibalventura.t7minutesworkout.databinding.FragmentExerciseBinding
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*

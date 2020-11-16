@@ -1,4 +1,4 @@
-package com.anibalventura.t7minutesworkout.data
+package com.anibalventura.t7minutesworkout.data.models
 
 import com.anibalventura.t7minutesworkout.R
 
