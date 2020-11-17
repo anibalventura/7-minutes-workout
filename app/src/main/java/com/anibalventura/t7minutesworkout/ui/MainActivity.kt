@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
             when (destination.id) {
                 R.id.homeFragment -> showToolbarTitleOrUp(toolBar, false, false)
-                R.id.exerciseFragment -> showToolbarTitleOrUp(toolBar, true, true)
+                R.id.exerciseFragment -> showToolbarTitleOrUp(toolBar, true, false)
                 R.id.bmiFragment -> showToolbarTitleOrUp(toolBar, true, true)
                 R.id.historyFragment -> showToolbarTitleOrUp(toolBar, true, true)
             }

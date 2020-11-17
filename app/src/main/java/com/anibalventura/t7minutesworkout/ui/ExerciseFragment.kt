@@ -20,7 +20,6 @@ import com.anibalventura.t7minutesworkout.adapters.ExerciseStatusAdapter
 import com.anibalventura.t7minutesworkout.data.models.ExerciseModel
 import com.anibalventura.t7minutesworkout.data.models.Exercises.getExercises
 import com.anibalventura.t7minutesworkout.databinding.FragmentExerciseBinding
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
@@ -52,11 +51,7 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
         startRestTimer(pauseOffset)
         setRestView()
         setupExerciseStatusRecyclerView()
-
         onBackPressed()
-        requireActivity().toolbar.setNavigationOnClickListener {
-            requireActivity().onBackPressed()
-        }
 
         return binding.root
     }
