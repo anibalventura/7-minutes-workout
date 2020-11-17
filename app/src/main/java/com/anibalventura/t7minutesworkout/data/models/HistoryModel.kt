@@ -8,6 +8,9 @@ import androidx.room.PrimaryKey
 class HistoryModel(
     @ColumnInfo(name = "date")
     val date: String,
+
+    @ColumnInfo(name = "time")
+    val time: String,
 ) {
     @PrimaryKey(autoGenerate = true)
     var id: Long? = null

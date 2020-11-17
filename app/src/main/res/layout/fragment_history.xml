@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="historyViewModel"
+            type="com.anibalventura.t7minutesworkout.data.viewmodel.HistoryViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,6 +23,31 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivNoNotes"
+            style="@style/ThemeNoData"
+            android:contentDescription="@string/history_no_data"
+            android:emptyDatabase="@{historyViewModel.emptyDatabase}"
+            android:src="@drawable/ic_history"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35" />
+
+        <TextView
+            android:id="@+id/tvNoNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:emptyDatabase="@{historyViewModel.emptyDatabase}"
+            android:text="@string/history_no_data"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivNoNotes" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -24,4 +24,10 @@
     <string name="bmi_us_height">HEIGHT (Feet)</string>
     <string name="history">Exercises History</string>
     <string name="home_btn_history">History</string>
+    <string name="menu_history_delete">Delete</string>
+    <string name="dialog_delete_history_title">Delete history</string>
+    <string name="dialog_delete_history_confirmation">Are you sure? This is permanently.</string>
+    <string name="dialog_confirmation">Yes</string>
+    <string name="snack_history_deleted">History deleted.</string>
+    <string name="history_no_data">No history. Start to exercise!</string>
 </resources>

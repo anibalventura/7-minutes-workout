@@ -3,6 +3,7 @@ package com.anibalventura.t7minutesworkout.data.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.anibalventura.t7minutesworkout.data.db.HistoryDatabase
 import com.anibalventura.t7minutesworkout.data.models.HistoryModel
@@ -39,9 +40,19 @@ class HistoryViewModel(application: Application) : AndroidViewModel(application)
     fun insertDateToDatabase() {
         val calendar = Calendar.getInstance()
         val dateTime = calendar.time
-        val sdf = SimpleDateFormat("dd MMM yyyy HH:mm", Locale.getDefault())
-        val date = sdf.format(dateTime)
+        val sdfDate = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
+        val sdfTime = SimpleDateFormat("HH:mm", Locale.getDefault())
+        val date = sdfDate.format(dateTime)
+        val time = sdfTime.format(dateTime)
 
-        insertItem(HistoryModel(date))
+        insertItem(HistoryModel(date, time))
+    }
+
+    /** =========================== Check for empty database. =========================== **/
+
+    val emptyDatabase: MutableLiveData<Boolean> = MutableLiveData(false)
+
+    fun checkIfHistoryIsEmpty(historyData: List<HistoryModel>) {
+        emptyDatabase.value = historyData.isEmpty()
     }
 }
