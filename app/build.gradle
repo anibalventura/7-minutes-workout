@@ -82,7 +82,4 @@ dependencies {
     // Material Dialogs
     implementation "com.afollestad.material-dialogs:core:$material_dialogs_version"
     implementation "com.afollestad.material-dialogs:bottomsheets:$material_dialogs_version"
-
-    // Preferences
-    implementation "androidx.preference:preference-ktx:1.1.1"
 }

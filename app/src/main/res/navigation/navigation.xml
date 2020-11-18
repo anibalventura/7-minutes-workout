@@ -13,14 +13,26 @@
         <action
             android:id="@+id/action_homeFragment_to_exerciseFragment"
             app:destination="@id/exerciseFragment"
+            app:enterAnim="@anim/animation_from_right"
+            app:exitAnim="@anim/animation_to_left"
+            app:popEnterAnim="@anim/animation_from_left"
+            app:popExitAnim="@anim/animation_to_right"
             app:popUpTo="@id/homeFragment" />
         <action
             android:id="@+id/action_homeFragment_to_bmiFragment"
             app:destination="@id/bmiFragment"
+            app:enterAnim="@anim/animation_from_left"
+            app:exitAnim="@anim/animation_to_right"
+            app:popEnterAnim="@anim/animation_from_right"
+            app:popExitAnim="@anim/animation_to_left"
             app:popUpTo="@id/homeFragment" />
         <action
             android:id="@+id/action_homeFragment_to_historyFragment"
             app:destination="@id/historyFragment"
+            app:enterAnim="@anim/animation_from_left"
+            app:exitAnim="@anim/animation_to_right"
+            app:popEnterAnim="@anim/animation_from_right"
+            app:popExitAnim="@anim/animation_to_left"
             app:popUpTo="@id/homeFragment" />
     </fragment>
     <fragment
@@ -31,6 +43,8 @@
         <action
             android:id="@+id/action_exerciseFragment_to_finishFragment"
             app:destination="@id/exerciseOverFragment"
+            app:enterAnim="@anim/animation_from_right"
+            app:exitAnim="@anim/animation_to_left"
             app:popUpTo="@id/homeFragment" />
     </fragment>
     <fragment
@@ -41,6 +55,10 @@
         <action
             android:id="@+id/action_finishFragment_to_homeFragment"
             app:destination="@id/homeFragment"
+            app:enterAnim="@anim/animation_from_left"
+            app:exitAnim="@anim/animation_to_right"
+            app:popEnterAnim="@anim/animation_from_right"
+            app:popExitAnim="@anim/animation_to_left"
             app:popUpTo="@id/homeFragment" />
     </fragment>
     <fragment
