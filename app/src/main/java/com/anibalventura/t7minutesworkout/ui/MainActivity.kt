@@ -20,11 +20,9 @@ class MainActivity : AppCompatActivity() {
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Set theme after splash screen.
-        setTheme(R.style.ThemeApp)
+        setTheme(R.style.ThemeApp) // Set theme after splash screen.
         super.onCreate(savedInstanceState)
 
-        // Use DataBinding to set the activity view.
         _binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.lifecycleOwner = this
 
@@ -55,15 +53,15 @@ class MainActivity : AppCompatActivity() {
             this.window.statusBarColor = ActivityCompat.getColor(this, R.color.primaryColor)
 
             when (destination.id) {
-                R.id.homeFragment -> showToolbarTitleOrUp(toolBar, false, false)
-                R.id.exerciseFragment -> showToolbarTitleOrUp(toolBar, true, false)
-                R.id.bmiFragment -> showToolbarTitleOrUp(toolBar, true, true)
-                R.id.historyFragment -> showToolbarTitleOrUp(toolBar, true, true)
+                R.id.homeFragment -> setToolBarView(toolBar, false, false)
+                R.id.exerciseFragment -> setToolBarView(toolBar, true, false)
+                R.id.bmiFragment -> setToolBarView(toolBar, true, true)
+                R.id.historyFragment -> setToolBarView(toolBar, true, true)
             }
         }
     }
 
-    private fun showToolbarTitleOrUp(
+    private fun setToolBarView(
         toolBar: ActionBar, showTitle: Boolean, showUpButton: Boolean
     ) {
         toolBar.setDisplayShowTitleEnabled(showTitle)

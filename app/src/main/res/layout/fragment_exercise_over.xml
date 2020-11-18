@@ -30,12 +30,9 @@
 
         <TextView
             android:id="@+id/tvCongratulations"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/ThemeDefaultText"
             android:layout_marginBottom="8dp"
             android:text="@string/exercise_over_congratulations"
-            android:textColor="#212121"
-            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/tvCongratulationsMsg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,12 +40,9 @@
 
         <TextView
             android:id="@+id/tvCongratulationsMsg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/ThemeDefaultText"
             android:layout_marginBottom="32dp"
             android:text="@string/exercise_over_congratulations_msg"
-            android:textColor="#212121"
-            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/btnFinish"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,13 +50,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnFinish"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/home_btn_start"
-            android:padding="8dp"
+            style="@style/ThemePillBtn"
             android:text="@string/exercise_over_btn_finish"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

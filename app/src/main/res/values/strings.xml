@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">7 Minutes Workout</string>
+    <string name="app_name" translatable="false">7 Minutes Workout</string>
     <string name="home_logo_description">Home Logo</string>
     <string name="home_btn_start">Start</string>
     <string name="progress_bar_get_ready">GET READY FOR</string>
@@ -10,18 +10,17 @@
     <string name="exercise_over_congratulations_msg">You have done the workout!</string>
     <string name="dialog_sure">Are you sure?</string>
     <string name="dialog_sure_msg">This will stop your workout. You\'ve come this far, are you sure you want to quit?</string>
-    <string name="dialog_positive">Yes</string>
-    <string name="dialog_negative">No</string>
-    <string name="home_btn_bmi">BMI</string>
+    <string name="dialog_negative" translatable="false">No</string>
+    <string name="home_btn_bmi" translatable="false">BMI</string>
     <string name="bmi_calculator">BMI Calculator</string>
-    <string name="bmi_metric_weight">WEIGHT (Kg)</string>
-    <string name="bmi_metric_height">HEIGHT (Cm)</string>
+    <string name="bmi_metric_weight">Weight (Kg)</string>
+    <string name="bmi_metric_height">Height (Cm)</string>
     <string name="bmi_calculate">Calculate</string>
     <string name="bmi_your_result">Your BMI</string>
     <string name="bmi_metric_units">METRIC UNITS</string>
     <string name="bmi_us_units">US UNITS</string>
-    <string name="bmi_us_weight">WEIGHT (Lbs)</string>
-    <string name="bmi_us_height">HEIGHT (Feet)</string>
+    <string name="bmi_us_weight">Weight (Lbs)</string>
+    <string name="bmi_us_height">Height (Feet)</string>
     <string name="history">Exercises History</string>
     <string name="home_btn_history">History</string>
     <string name="menu_history_delete">Delete</string>
@@ -30,4 +29,33 @@
     <string name="dialog_confirmation">Yes</string>
     <string name="snack_history_deleted">History deleted.</string>
     <string name="history_no_data">No history. Start to exercise!</string>
+    <string name="bmi_label_verey_underweight">Very severely underweight</string>
+    <string name="bmi_description_verey_underweight">Oops! You really need to take better care of yourself! Eat more!</string>
+    <string name="bmi_label_severely_underweight">Severely underweight</string>
+    <string name="bmi_description_severely_underweight">Oops!You really need to take better care of yourself! Eat more!</string>
+    <string name="bmi_label_underweight">Underweight</string>
+    <string name="bmi_description_underweight">Oops! You really need to take better care of yourself! Eat more!</string>
+    <string name="bmi_label_normal" translatable="false">Normal</string>
+    <string name="bmi_description_normal">Congratulations! You are in a good shape!</string>
+    <string name="bmi_label_overweight">Overweight</string>
+    <string name="bmi_description_overweight">Oops! You really need to take care of your yourself! Workout maybe!</string>
+    <string name="bmi_label_obese_1">Obese Class | (Moderately obese)</string>
+    <string name="bmi_label_obese_2">Obese Class || (Severely obese)</string>
+    <string name="bmi_label_obese_3">Obese Class ||| (Very Severely obese)</string>
+    <string name="bmi_description_obese_1">Oops! You really need to take care of your yourself! Workout maybe!</string>
+    <string name="bmi_description_obese_2">OMG! You are in a very dangerous condition! Act now!</string>
+    <string name="bmi_description_obese_3">OMG! You are in a very dangerous condition! Act now!</string>
+    <string name="bmi_complete_fields">Please complete fields.</string>
+    <string name="exercise_jumping_jacks" translatable="false">Jumping Jacks</string>
+    <string name="exercise_wall_sit" translatable="false">Wall Sit</string>
+    <string name="exercise_push_up" translatable="false">Push Up</string>
+    <string name="exercise_abdominal_crunch" translatable="false">Abdominal Crunch</string>
+    <string name="exercise_step_up_chair" translatable="false">Step-Up onto Chair</string>
+    <string name="exercise_squat" translatable="false">Squat</string>
+    <string name="exercise_triceps_dip_chair" translatable="false">Triceps Dip On Chair</string>
+    <string name="exercise_plank" translatable="false">Plank</string>
+    <string name="exercise_high_knees_running" translatable="false">High Knees Running In Place</string>
+    <string name="exercise_lunges" translatable="false">Lunges</string>
+    <string name="exercise_push_up_rotation" translatable="false">Push up and Rotation</string>
+    <string name="exercise_side_plank" translatable="false">Side Plank</string>
 </resources>

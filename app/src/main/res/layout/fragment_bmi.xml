@@ -6,8 +6,12 @@
     <data>
 
         <variable
-            name="bmi"
+            name="bmiFragment"
             type="com.anibalventura.t7minutesworkout.ui.BmiFragment" />
+
+        <variable
+            name="bmiViewModel"
+            type="com.anibalventura.t7minutesworkout.data.viewmodel.BmiViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -184,9 +188,7 @@
 
             <TextView
                 android:id="@+id/tvYourBMI"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
+                style="@style/ThemeDefaultText"
                 android:text="@string/bmi_your_result"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -197,24 +199,21 @@
 
             <TextView
                 android:id="@+id/tvBMIValue"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="18sp"
+                style="@style/ThemeDefaultText"
+                android:text="@{bmiViewModel.bmiValue}"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/tvBMIType"
+                app:layout_constraintBottom_toTopOf="@+id/tvBMILabel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvYourBMI"
                 tools:text="15.00" />
 
             <TextView
-                android:id="@+id/tvBMIType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/tvBMILabel"
+                style="@style/ThemeDefaultText"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:textSize="18sp"
+                android:text="@{bmiViewModel.bmiLabel}"
                 app:layout_constraintBottom_toTopOf="@+id/tvBMIDescription"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -223,28 +222,24 @@
 
             <TextView
                 android:id="@+id/tvBMIDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/ThemeDefaultText"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:textSize="18sp"
+                android:text="@{bmiViewModel.bmiDescription}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvBMIType"
+                app:layout_constraintTop_toBottomOf="@+id/tvBMILabel"
                 tools:text="Congratulations! You are in a good shape!" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnCalculate"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/home_btn_start"
-            android:onClick="@{() -> bmi.calculateUnits()}"
+            style="@style/ThemePillBtn"
+            android:onClick="@{() -> bmiFragment.calculateUnits()}"
             android:text="@string/bmi_calculate"
             android:textColor="@color/primaryTextColor"
-            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

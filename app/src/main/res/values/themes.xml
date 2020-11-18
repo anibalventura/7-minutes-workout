@@ -19,6 +19,21 @@
         <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
     </style>
 
+    <style name="ThemePillBtn">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/pill_btn</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ThemeDefaultText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
     <style name="ThemeNoData">
         <item name="android:layout_width">160dp</item>
         <item name="android:layout_height">160dp</item>

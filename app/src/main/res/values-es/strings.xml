@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_logo_description">Logo Inicio</string>
+    <string name="home_btn_start">Iniciar</string>
+    <string name="progress_bar_get_ready">PREPARATE PARA</string>
+    <string name="exercise_image">Imagen Ejercicio</string>
+    <string name="exercise_over_btn_finish">Finalizar</string>
+    <string name="exercise_over_done_image">Imagen Finalizar</string>
+    <string name="exercise_over_congratulations">Felicidades!</string>
+    <string name="exercise_over_congratulations_msg">¡Has hecho el entrenamiento!</string>
+    <string name="dialog_sure">Estas seguro?</string>
+    <string name="dialog_sure_msg">Esto detendrá tu entrenamiento. Has llegado hasta aquí, ¿estás seguro de que quieres finalizar?</string>
+    <string name="bmi_calculator">Calculadora BMI</string>
+    <string name="bmi_metric_weight">Peso (Kg)</string>
+    <string name="bmi_metric_height">Altura (Cm)</string>
+    <string name="bmi_calculate">Calcular</string>
+    <string name="bmi_your_result">Tu BMI</string>
+    <string name="bmi_metric_units">UNID. METRICAS</string>
+    <string name="bmi_us_units">UNID. US</string>
+    <string name="bmi_us_weight">Peso (Lbs)</string>
+    <string name="bmi_us_height">Altura (Pies)</string>
+    <string name="history">Historial de Entrenamiento</string>
+    <string name="home_btn_history">Historial</string>
+    <string name="menu_history_delete">Eliminar</string>
+    <string name="dialog_delete_history_title">Eliminar historial</string>
+    <string name="dialog_delete_history_confirmation">¿Estás seguro? Esto es de forma permanente.</string>
+    <string name="dialog_confirmation">Si</string>
+    <string name="snack_history_deleted">Historial eliminado.</string>
+    <string name="history_no_data">Sin historial. Inicia el entrenamiento!</string>
+    <string name="bmi_label_verey_underweight">Peso muy inferior al normal</string>
+    <string name="bmi_description_verey_underweight">¡Ups! ¡Realmente necesitas cuidarte mejor! ¡Come más!</string>
+    <string name="bmi_label_severely_underweight">Severamente bajo de peso</string>
+    <string name="bmi_description_severely_underweight">¡Vaya! ¡Realmente necesitas cuidarte mejor! ¡Come más!</string>
+    <string name="bmi_label_underweight">Bajo peso</string>
+    <string name="bmi_description_underweight">¡Ups! ¡Realmente necesitas cuidarte mejor! ¡Come más!</string>
+    <string name="bmi_description_normal">¡Felicidades! ¡Estás en buena forma!</string>
+    <string name="bmi_label_overweight">Exceso de peso</string>
+    <string name="bmi_description_overweight">¡Ups! ¡Realmente necesitas cuidarte! ¡Hacer ejercicio tal vez!</string>
+    <string name="bmi_label_obese_1">Clase de obesidad | (Moderadamente obeso)</string>
+    <string name="bmi_label_obese_2">Clase de obesidad || (Severamente obeso)</string>
+    <string name="bmi_label_obese_3">Clase de obesidad ||| (Severamente muy obeso)</string>
+    <string name="bmi_description_obese_1">¡Ups! ¡Realmente necesitas cuidarte! ¡Hacer ejercicio tal vez!</string>
+    <string name="bmi_description_obese_2">¡DIOS MIO! ¡Estás en una condición muy peligrosa! ¡Actua ahora!</string>
+    <string name="bmi_description_obese_3">¡DIOS MIO! ¡Estás en una condición muy peligrosa! ¡Actua ahora!</string>
+    <string name="bmi_complete_fields">Por favor complete los campos.</string>
+    <string name="exercise_jumping_jacks">Salto de Estrella</string>
+</resources>

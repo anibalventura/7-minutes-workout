@@ -9,7 +9,7 @@ import com.anibalventura.t7minutesworkout.databinding.RecyclerviewHistoryBinding
 
 class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.MyViewHolder>() {
 
-    var dataList = emptyList<HistoryModel>()
+    private var dataList = emptyList<HistoryModel>()
 
     class MyViewHolder(private val binding: RecyclerviewHistoryBinding) :
         RecyclerView.ViewHolder(binding.root) {

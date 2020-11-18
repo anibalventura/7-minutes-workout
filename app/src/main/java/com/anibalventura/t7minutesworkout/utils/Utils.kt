@@ -1,9 +1,11 @@
 package com.anibalventura.t7minutesworkout.utils
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
 import com.anibalventura.t7minutesworkout.utils.Constants.THEME
@@ -39,4 +41,9 @@ fun shareText(context: Context, message: String) {
     // Send the intent.
     Intent(context, Dispatchers.Main::class.java)
     context.startActivity(Intent.createChooser(sendIntent, null))
+}
+
+fun hideKeyboard(activity: Activity, view: View) {
+    val imm = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    imm.hideSoftInputFromWindow(view.windowToken, 0)
 }

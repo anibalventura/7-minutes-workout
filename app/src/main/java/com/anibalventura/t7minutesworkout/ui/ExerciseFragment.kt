@@ -29,12 +29,12 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
 
     private var countDownTimer: CountDownTimer? = null
     private val countDownInterval: Long = 1000
-    private var timerProgressBar: Long = 3000
-    private var timerExercise: Long = 5000
+    private var timerProgressBar: Long = 11000
+    private var timerExercise: Long = 31000
     private var pauseOffset: Long = 0 // timerDuration - time left
 
     private var exerciseList: MutableList<ExerciseModel>? = null
-    private var currentExercisePosition = 10
+    private var currentExercisePosition = -1
 
     private var tts: TextToSpeech? = null
     private var player: MediaPlayer? = null
@@ -165,7 +165,7 @@ class ExerciseFragment : Fragment(), TextToSpeech.OnInitListener {
                         title(R.string.dialog_sure)
                         message(R.string.dialog_sure_msg)
                         negativeButton(R.string.dialog_negative)
-                        positiveButton(R.string.dialog_positive) {
+                        positiveButton(R.string.dialog_confirmation) {
                             if (isEnabled) {
                                 isEnabled = false
                                 requireActivity().onBackPressed()

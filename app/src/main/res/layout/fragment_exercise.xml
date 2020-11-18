@@ -15,8 +15,7 @@
 
             <TextView
                 android:id="@+id/tvRest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/ThemeDefaultText"
                 android:layout_marginBottom="16dp"
                 android:text="@string/progress_bar_get_ready"
                 android:textColor="@color/primaryColor"
@@ -28,10 +27,8 @@
 
             <TextView
                 android:id="@+id/tvUpcomingExercise"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/ThemeDefaultText"
                 android:layout_marginBottom="24dp"
-                android:textColor="@color/secondaryTextColor"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/flRestTimer"
@@ -91,7 +88,8 @@
             <ImageView
                 android:id="@+id/ivExercise"
                 android:layout_width="wrap_content"
-                android:layout_height="400dp"
+                android:layout_height="380dp"
+                android:layout_marginTop="16dp"
                 android:contentDescription="@string/exercise_image"
                 android:scaleType="fitXY"
                 app:layout_constraintBottom_toTopOf="@+id/tvExerciseName"
@@ -104,8 +102,8 @@
 
             <TextView
                 android:id="@+id/tvExerciseName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/ThemeDefaultText"
+                android:layout_marginTop="16dp"
                 android:textColor="@color/primaryColor"
                 android:textSize="22sp"
                 android:textStyle="bold"

@@ -27,13 +27,11 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnStart"
+            style="@style/ThemePillBtn"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/home_btn_start"
             android:onClick="@{() -> home.btnPressed(&quot;start&quot;)}"
             android:padding="16dp"
             android:text="@string/home_btn_start"
-            android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,31 +41,26 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnBmi"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/home_btn_start"
+            style="@style/ThemePillBtn"
             android:onClick="@{() -> home.btnPressed(&quot;bmi&quot;)}"
             android:text="@string/home_btn_bmi"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnHistory"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnStart" />
+            app:layout_constraintTop_toBottomOf="@+id/btnHistory" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnHistory"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/home_btn_start"
+            style="@style/ThemePillBtn"
+            android:layout_marginBottom="16dp"
             android:onClick="@{() -> home.btnPressed(&quot;history&quot;)}"
             android:text="@string/home_btn_history"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btnBmi"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnBmi"
-            app:layout_constraintTop_toBottomOf="@+id/btnStart" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnStart"
+            app:layout_constraintVertical_bias="0.40"
+            app:layout_constraintVertical_chainStyle="packed" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
